@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background: url(assets/bg-card.jpg) fixed;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    /* background: brown;*/
+}
+
+.container .thumb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+
+}
+
+.container .thumb li {
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: -7px 5px 21px 7px rgba(96, 84, 92, 0.71);
+    box-shadow: -7px 5px 21px 7px rgba(96, 84, 92, 0.71);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+
+
+}
+
+.container .thumb li img {
+    width: 70%;
+    transition: 0.5s;
+
+
+}
+
+.container .thumb li:hover img {
+    transform: rotate(-25deg);
+}
+
+.container .imgBox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: -7px 5px 21px 7px rgba(96, 84, 92, 0.71);
+    box-shadow: -7px 5px 21px 7px rgba(96, 84, 92, 0.71);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.container .imgBox h2 {
+    color: #9a9af1;
+    letter-spacing: 1;
+}
+
+.container .imgBox img {
+    width: 60%;
+    transition: 0.25s;
+}
+
+.container .imgBox img:hover {
+    transform: scale(1.1) rotate(-15deg) translateX(20px);
+}
+
+.container .imgBox .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container .imgBox .size span{
+    color:#ffff;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+margin-right: 5px;
+}
+.container .imgBox .size li{
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    background: azure;
+    color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: 700;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    cursor: crosshair;
+    transition: 0.25s;
+}
+.container .imgBox .size li:hover{
+    transform: translateY(-5px);
+
+}
+.container .imgBox .btn{
+    position: absolute;
+    bottom: -30px;
+    background: cornsilk;
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    font-weight: 500;
+    color: cadetblue;
+    transition: 0.25s;
+
+
+}
+.container .imgBox .btn:hover{
+    letter-spacing: 1px;
+}
