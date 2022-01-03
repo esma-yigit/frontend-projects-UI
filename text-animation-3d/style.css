@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(assets/bg-3d.jpg) no-repeat fixed;
+    background-size: cover;
+    overflow: hidden;
+
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container .box {
+    transform-style: preserve-3d;
+    animation: animate 25s linear infinite;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateX(0deg) rotate(25deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(360deg) rotate(25deg);
+    }
+
+}
+
+.container .box span {
+    position: absolute;
+    color: #ffffff;
+    font-size: 3.5em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    padding: 0 10px;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.5), transparent);
+    line-height: 0.76em;
+    letter-spacing: 1.2px;
+
+    transform-style: preserve-3d;
+    text-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+    transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(110px);
+
+
+}
+
+.container .box span i:nth-child(1) {
+    font-style: initial;
+   color: #62e8d7;
+
+}
+
+.container .box span i:nth-child(2) {
+    font-style: initial;
+    color: darkorange;
+}
