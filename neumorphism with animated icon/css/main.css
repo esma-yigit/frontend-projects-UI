@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #a3e7e7;
+}
+
+.loader {
+  position: relative;
+  display: flex;
+}
+.loader .elevator {
+  position: absolute;
+  inset: 50px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+@keyframes animateElevator {
+  0%, 100% {
+    transform: translate(0px, 0px) rotate(45deg);
+  }
+  50% {
+    transform: translate(0px, 3px) rotate(-45deg);
+  }
+}
+@keyframes animateSnow {
+  0% {
+    transform: translateY(-175px);
+  }
+  100% {
+    transform: translateY(175px);
+  }
+}
+.loader .elevator .img {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  animation: animateElevator 4s linear infinite;
+}
+.loader .elevator .snow {
+  position: absolute;
+  top: calc(35px * var(--i));
+  left: calc(45px * var(--i));
+  width: 24px;
+  animation: animateSnow 1s linear infinite;
+  animation-delay: calc(-0.5s * var(--i));
+}
+.loader span {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: #a3e7e7;
+  border: 6px solid #a3e7e7;
+  box-shadow: -8px -8px 25px white, 8px 8px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.loader span::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.5), inset -5px -5px 15px white;
+}
+.loader span::after {
+  content: "";
+  position: absolute;
+  inset: 30px;
+  background-color: #dc2751;
+  border: 3px solid #d3eeee;
+  border-radius: 50%;
+  box-shadow: -8px -8px 25px white, 8px 8px 25px rgba(0, 0, 0, 0.25), inset 3px 3px 10px rgba(0, 0, 0, 0.15), inset -1px -1px 15px white;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader span i {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(#AA7CB0, #BC7D5E, #FFDE2E);
+  animation: animate 1s linear infinite;
+}
+
+/*# sourceMappingURL=main.css.map */
